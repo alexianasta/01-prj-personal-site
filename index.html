@@ -2,10 +2,106 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My Personal Site</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alexia Nastasia</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Add your HTML content here -->
+  <!-- Hero section: site header with navigation and title -->
+  <header class="hero" id="home">
+    <nav class="nav">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <h1>Alexia Nastasia's Web Portfolio</h1>
+  </header>
+
+  <!-- About section: short bio moved here so nav can link to it -->
+  <section class="about" id="about">
+    <p class="subtitle">A senior at Boston University majoring in International Relations and Anthropology</p>
+  </section>
+
+  <!-- Articles: featured post and two regular posts -->
+  <main class="content" id="articles">
+    <section class="featured" id="featured">
+      <div class="featured-image image-placeholder" aria-hidden="true"></div>
+      <div class="featured-content">
+        <h2 class="post-title">Featured: About Alexia</h2>
+        <ul class="meta">
+          <li>Boston University</li>
+          <li>Senior</li>
+          <li>International Relations & Anthropology</li>
+        </ul>
+        <p class="post-excerpt">Alexia combines analytical thinking with creative problem solving. She is interested in the intersection of policy and people, and builds projects that communicate ideas clearly.</p>
+        <a class="read-link" href="#">Learn more</a>
+      </div>
+    </section>
+
+    <section class="post-list">
+      <article class="post">
+        <div class="post-image image-placeholder" aria-hidden="true"></div>
+        <div class="post-body">
+          <h3 class="post-title">Project One</h3>
+          <ul class="meta">
+            <li>2026</li>
+            <li>Web</li>
+          </ul>
+          <p class="post-excerpt">A simple web project demonstrating layout and responsive design.</p>
+          <a class="read-link" href="#">View project</a>
+        </div>
+      </article>
+
+      <article class="post">
+        <div class="post-image image-placeholder" aria-hidden="true"></div>
+        <div class="post-body">
+          <h3 class="post-title">Project Two</h3>
+          <ul class="meta">
+            <li>2026</li>
+            <li>Design</li>
+          </ul>
+          <p class="post-excerpt">A brief case study highlighting visual design choices and concepts.</p>
+          <a class="read-link" href="#">View project</a>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <!-- Skills section: unbulleted badges so it's easy to edit -->
+  <section class="skills-section" id="skills">
+    <h2>Skills & Strengths</h2>
+    <div class="skills">
+      <span class="skill">Tenacity</span>
+      <span class="skill">Focus</span>
+      <span class="skill">Drive</span>
+      <span class="skill">Creativity</span>
+    </div>
+  </section>
+
+  <!-- Projects section: two link areas for your project pages -->
+  <section class="projects-section" id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <a class="project" href="#" target="_blank">Project One<span class="project-desc"> — link</span></a>
+      <a class="project" href="#" target="_blank">Project Two<span class="project-desc"> — link</span></a>
+    </div>
+  </section>
+
+  <!-- More Information: bottom links -->
+  <section class="more-info">
+    <h2>More Information</h2>
+    <ul class="more-links">
+      <li><a href="#">Resume</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="#">LinkedIn</a></li>
+    </ul>
+  </section>
+
+  <!-- Footer: small copyright line -->
+  <footer class="footer">
+    <p>© Alexia Nastasia</p>
+  </footer>
 </body>
 </html>

@@ -1,1 +1,194 @@
-/* Add you CSS here */
+/* Simple beginner-friendly styles for the portfolio */
+
+/* Basic page reset and typography */
+body {
+	font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+	margin: 0;
+	padding-top: 64px; /* leave space for the fixed nav */
+	background: #fbfbfd; /* very light neutral */
+	color: #0f172a; /* neutral dark text */
+	line-height: 1.6;
+}
+
+/* Hero: center title and bio */
+.hero {
+	text-align: center;
+	padding: 48px 20px 40px; /* reduce top padding now nav reserves space */
+	background: linear-gradient(180deg, #ffffff, #eef2f7);
+	border-bottom: 1px solid #e6e9ee;
+}
+
+.hero h1 {
+	margin: 0;
+	font-size: 32px;
+	line-height: 1.2;
+}
+
+.subtitle {
+	margin-top: 12px;
+	color: #555;
+	font-size: 16px;
+}
+
+/* Navigation: fixed horizontal bar at top (purple) */
+.nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 64px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #6b21a8; /* purple */
+	box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+	z-index: 1000;
+}
+.nav a {
+	display: inline-block;
+	margin: 0 12px;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 600;
+	padding: 8px 10px;
+	border-radius: 4px;
+}
+.nav a:hover {
+	background: rgba(255,255,255,0.08);
+	text-decoration: none;
+}
+
+/* About section (simple spacing) */
+.about {
+	max-width: 800px;
+	margin: 18px auto;
+	padding: 0 20px;
+	text-align: center;
+}
+
+/* Skills: unbulleted, simple badge-style items */
+.skills-section {
+	padding: 40px 20px;
+	text-align: center;
+}
+
+.skills {
+	margin-top: 16px;
+}
+
+.skill {
+	display: inline-block;
+	background: #ffffff;
+	border: 1px solid #d1d5db;
+	padding: 8px 12px;
+	margin: 6px;
+	border-radius: 20px;
+	font-weight: 600;
+	color: #111827;
+}
+
+/* Projects: two simple link cards */
+.projects-section {
+	padding: 30px 20px;
+	text-align: center;
+}
+.projects {
+	margin-top: 12px;
+}
+.project {
+	display: inline-block;
+	background: #ffffff;
+	border: 1px solid #d1d5db;
+	padding: 14px 18px;
+	margin: 8px;
+	border-radius: 8px;
+	color: #0f172a;
+	text-decoration: none;
+	font-weight: 700;
+}
+.project:hover {
+	background: #f1f5f9;
+}
+.project-desc {
+	font-weight: 400;
+	color: #475569;
+	margin-left: 6px;
+}
+
+/* Content / Articles styles (minimal, modern) */
+.content {
+	max-width: 980px;
+	margin: 18px auto;
+	padding: 0 20px 30px;
+}
+
+.image-placeholder {
+	background: #e9eaf0;
+	border-radius: 8px;
+	min-height: 140px;
+}
+
+/* Featured post stands out: larger image, card with gentle shadow and accent */
+.featured {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 20px;
+	align-items: center;
+	background: #ffffff;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 6px 18px rgba(15,23,42,0.06);
+	border-left: 6px solid #6b21a8; /* subtle purple accent */
+	margin-bottom: 20px;
+}
+.featured-image { min-height: 220px; }
+.featured-content .post-title { margin: 0 0 8px; font-size: 22px; }
+.featured .post-excerpt { margin-top: 8px; color: #374151; }
+
+/* Regular posts: consistent spacing, subtle style */
+.post-list { margin-top: 18px; }
+.post {
+	display: flex;
+	gap: 18px;
+	align-items: flex-start;
+	background: #ffffff;
+	padding: 14px;
+	border-radius: 10px;
+	border: 1px solid #eef0f4;
+	margin-bottom: 14px;
+}
+.post-image { width: 220px; min-height: 120px; flex: 0 0 220px; }
+.post-body { flex: 1; }
+.post-title { margin: 0 0 6px; font-size: 18px; }
+.post-excerpt { margin: 8px 0; color: #374151; }
+
+/* Metadata: items appear inline */
+.meta { list-style: none; padding: 0; margin: 0 0 8px 0; display: flex; gap: 12px; color: #6b7280; font-size: 14px; }
+.meta li { display: inline; }
+
+.read-link { color: #6b21a8; font-weight: 700; text-decoration: none; }
+.read-link:hover { text-decoration: underline; }
+
+/* More Information (bottom links) */
+.more-info { max-width: 980px; margin: 20px auto 40px; padding: 0 20px; text-align: center; }
+.more-links { list-style: none; padding: 0; margin: 12px 0 0; display: inline-flex; gap: 18px; }
+.more-links a { color: #0f172a; text-decoration: none; border-bottom: 1px solid transparent; padding-bottom: 2px; }
+.more-links a:hover { border-color: #c7b3e9; }
+
+/* Responsive: stack columns on small screens */
+@media (max-width: 720px) {
+	.featured { grid-template-columns: 1fr; }
+	.post { flex-direction: column; }
+	.post-image { width: 100%; flex: none; }
+}
+
+/* Footer */
+.footer {
+	text-align: center;
+	padding: 20px;
+	font-size: 13px;
+	color: #666;
+	border-top: 1px solid #e6e9ee;
+}
+
+/* Tip: edit these colors and spacing as you learn */
